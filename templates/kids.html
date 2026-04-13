@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kids' Collections - SFD Fashions</title>
+    <link rel="stylesheet" href="{% static 'css/webpage.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="header">
+        <img src="https://via.placeholder.com/50x50?text=SFD" alt="SFD Logo" id="logo">
+        <h2 id="name">SFD Fashions</h2>
+        <ul>
+        <li><a href="{% url 'index' %}">Home</a></li>
+        <li><a href="{% url 'men' %}">Men's outfits👕</a></li>
+        <li><a href="{% url 'women' %}">Women's outfits👗</a></li>
+        </ul>
+        <button id="back-btn" onclick="goBack()">Back</button>
+    </div>
+   <div id="page">
+     <h1>Kids' Collections</h1>
+     <div id="content" class="kids">
+        <a href="#" onclick="window.open('{% url 'casual_kids' %}', '_blank')"><img src="https://via.placeholder.com/300x300?text=Kids+Outfit+1" alt="" class="wear"><p class="fits">Casual-Shirts</p></a>
+        <a href="#" onclick="window.open('{% url 'tshirts_kids' %}', '_blank')"><img src="https://via.placeholder.com/300x300?text=Kids+Outfit+1" alt="" class="wear"><p class="fits">T-Shirts</p></a>
+
+        <a href="#" onclick="window.open('{% url 'veshti_kids' %}', '_blank')"><img src="https://via.placeholder.com/300x300?text=Kids+Outfit+2" alt="" class="wear"><p class="fits">Veshti-Shirts</p></a>
+        
+    </div>
+     </div>
+     <div id="footer">
+        <ul class="list">
+            <h3 class="topic">Contact Details</h3>
+            <li class="items">Phone : 9876543210</li>
+            <li class="items">Instagram : @sfd_fashions</li>
+            <li class="items">Location : Tholar,Virudhachalam,Cuddalore</li>
+            <li class="items">Email : sfd_fashions@gmail.com</li>
+        </ul>
+    
+     </div>
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

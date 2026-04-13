@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salwar Collections - SFD Fashions</title>
+    <link rel="stylesheet" href="{% static 'css/webpage.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="header">
+        <img src="https://via.placeholder.com/50x50?text=SFD" alt="SFD Logo" id="logo">
+        <h2 id="name">SFD Fashions</h2>
+        <ul>
+        <li><a href="{% url 'index' %}">Home</a></li>
+        <li><a href="{% url 'men' %}">Men's outfits👕</a></li>
+        <li><a href="{% url 'women' %}">Women's outfits👗</a></li>
+        <li><a href="{% url 'kids' %}">Kids outfits👚</a></li>
+        </ul>
+        <button id="back-btn" onclick="goBack()">Back</button>
+    </div>
+   <div id="page">
+     <h1>Salwar Collections</h1>
+     <div id="content">
+        <a href="#" onclick="showGallery('Red Salwar Suit')"><img src="https://via.placeholder.com/300x300?text=Red+Salwar+Suit" alt="" class="wear"><p class="fits">Red Salwar Suits</p></a>
+        <a href="#" onclick="showGallery('Blue Salwar Kameez')"><img src="https://via.placeholder.com/300x300?text=Blue+Salwar+Kameez" alt="" class="wear"><p class="fits">Blue Salwar Kameez</p></a>
+        <a href="#" onclick="showGallery('Green Anarkali Salwar')"><img src="https://via.placeholder.com/300x300?text=Green+Anarkali+Salwar" alt="" class="wear"><p class="fits">Green Anarkali Salwar</p></a>
+        <a href="#" onclick="showGallery('Black Straight Salwar')"><img src="https://via.placeholder.com/300x300?text=Black+Straight+Salwar" alt="" class="wear"><p class="fits">Black Straight Salwar</p></a>
+        <a href="#" onclick="showGallery('White Embroidered Salwar')"><img src="https://via.placeholder.com/300x300?text=White+Embroidered+Salwar" alt="" class="wear"><p class="fits">White Embroidered Salwar</p></a>
+        <a href="#" onclick="showGallery('Pink Patiala Salwar')"><img src="https://via.placeholder.com/300x300?text=Pink+Patiala+Salwar" alt="" class="wear"><p class="fits">Pink Patiala Salwar</p></a>
+        <a href="#" onclick="showGallery('Gold Thread Salwar')"><img src="https://via.placeholder.com/300x300?text=Gold+Thread+Salwar" alt="" class="wear"><p class="fits">Gold Thread Salwar</p></a>
+        <a href="#" onclick="showGallery('Silver Zari Salwar')"><img src="https://via.placeholder.com/300x300?text=Silver+Zari+Salwar" alt="" class="wear"><p class="fits">Silver Zari Salwar</p></a>
+        <a href="#" onclick="showGallery('Cream Churidar Salwar')"><img src="https://via.placeholder.com/300x300?text=Cream+Churidar+Salwar" alt="" class="wear"><p class="fits">Cream Churidar Salwar</p></a>
+        <a href="#" onclick="showGallery('Navy Palazzo Salwar')"><img src="https://via.placeholder.com/300x300?text=Navy+Palazzo+Salwar" alt="" class="wear"><p class="fits">Navy Palazzo Salwar</p></a>
+        <a href="#" onclick="showGallery('Burgundy Lehenga Salwar')"><img src="https://via.placeholder.com/300x300?text=Burgundy+Lehenga+Salwar" alt="" class="wear"><p class="fits">Burgundy Lehenga Salwar</p></a>
+        <a href="#" onclick="showGallery('Yellow Sharara Salwar')"><img src="https://via.placeholder.com/300x300?text=Yellow+Sharara+Salwar" alt="" class="wear"><p class="fits">Yellow Sharara Salwar</p></a>
+    </div>
+     <div id="gallery" style="display: none;">
+       <h2 id="gallery-title"></h2>
+       <div id="gallery-images"></div>
+       <button onclick="closeGallery()">Close</button>
+     </div>
+     </div>
+     <div id="footer">
+        <ul class="list">
+            <h3 class="topic">Contact Details</h3>
+            <li>Phone: +91 9876543210</li>
+            <li>Email: info@sfdfashions.com</li>
+            <li>Address: 123 Fashion Street, Chennai, India</li>
+        </ul>
+        <ul class="list">
+            <h3 class="topic">Follow Us</h3>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Twitter</a></li>
+        </ul>
+        <ul class="list">
+            <h3 class="topic">Quick Links</h3>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'men' %}">Men</a></li>
+            <li><a href="{% url 'women' %}">Women</a></li>
+            <li><a href="{% url 'kids' %}">Kids</a></li>
+        </ul>
+    </div>
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

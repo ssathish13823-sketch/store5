@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Django App</h1>
+        <p>This is a responsive page with JavaScript.</p>
+        <button id="changeTextBtn">Click me</button>
+        <p id="message">Hello, World!</p>
+    </div>
+
+    <script>
+        document.getElementById('changeTextBtn').addEventListener('click', function() {
+            const message = document.getElementById('message');
+            message.textContent = 'You clicked the button! The page is responsive.';
+        });
+
+        // Simple responsiveness check
+        window.addEventListener('resize', function() {
+            if (window.innerWidth < 600) {
+                document.body.style.backgroundColor = '#e9ecef';
+            } else {
+                document.body.style.backgroundColor = '#f4f4f4';
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linen Shirts Collections - SFD Fashions</title>
+    <link rel="stylesheet" href="{% static 'css/webpage.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="header">
+        <img src="https://via.placeholder.com/50x50?text=SFD" alt="SFD Logo" id="logo">
+        <h2 id="name">SFD Fashions</h2>
+        <ul>
+        <li><a href="{% url 'index' %}">Home</a></li>
+        <li><a href="{% url 'men' %}">Men's outfits👕</a></li>
+        <li><a href="{% url 'women' %}">Women's outfits👗</a></li>
+        <li><a href="{% url 'kids' %}">Kids outfits👚</a></li>
+        </ul>
+        <button id="back-btn" onclick="goBack()">Back</button>
+    </div>
+   <div id="page">
+     <h1>Linen Shirts Collections</h1>
+     <div id="content">
+        <a href="#" onclick="showGallery('White Linen Shirt')"><img src="https://via.placeholder.com/300x300?text=White+Linen+Shirt" alt="" class="wear"><p class="fits">White Linen Shirts</p></a>
+        <a href="#" onclick="showGallery('Beige Linen')"><img src="https://via.placeholder.com/300x300?text=Beige+Linen" alt="" class="wear"><p class="fits">Beige Linen</p></a>
+        <a href="#" onclick="showGallery('Light Blue Linen')"><img src="https://via.placeholder.com/300x300?text=Light+Blue+Linen" alt="" class="wear"><p class="fits">Light Blue Linen</p></a>
+        <a href="#" onclick="showGallery('Cream Linen')"><img src="https://via.placeholder.com/300x300?text=Cream+Linen" alt="" class="wear"><p class="fits">Cream Linen</p></a>
+        <a href="#" onclick="showGallery('Gray Linen')"><img src="https://via.placeholder.com/300x300?text=Gray+Linen" alt="" class="wear"><p class="fits">Gray Linen</p></a>
+        <a href="#" onclick="showGallery('Navy Linen')"><img src="https://via.placeholder.com/300x300?text=Navy+Linen" alt="" class="wear"><p class="fits">Navy Linen</p></a>
+        <a href="#" onclick="showGallery('Pastel Linen')"><img src="https://via.placeholder.com/300x300?text=Pastel+Linen" alt="" class="wear"><p class="fits">Pastel Linen</p></a>
+        <a href="#" onclick="showGallery('Striped Linen')"><img src="https://via.placeholder.com/300x300?text=Striped+Linen" alt="" class="wear"><p class="fits">Striped Linen</p></a>
+        <a href="#" onclick="showGallery('Checked Linen')"><img src="https://via.placeholder.com/300x300?text=Checked+Linen" alt="" class="wear"><p class="fits">Checked Linen</p></a>
+        <a href="#" onclick="showGallery('Solid Linen')"><img src="https://via.placeholder.com/300x300?text=Solid+Linen" alt="" class="wear"><p class="fits">Solid Linen</p></a>
+        <a href="#" onclick="showGallery('Short Sleeve Linen')"><img src="https://via.placeholder.com/300x300?text=Short+Sleeve+Linen" alt="" class="wear"><p class="fits">Short Sleeve Linen</p></a>
+        <a href="#" onclick="showGallery('Long Sleeve Linen')"><img src="https://via.placeholder.com/300x300?text=Long+Sleeve+Linen" alt="" class="wear"><p class="fits">Long Sleeve Linen</p></a>
+    </div>
+     <div id="gallery" style="display: none;">
+       <h2 id="gallery-title"></h2>
+       <div id="gallery-images"></div>
+       <button onclick="closeGallery()">Close</button>
+     </div>
+     </div>
+     <div id="footer">
+        <ul class="list">
+            <h3 class="topic">Contact Details</h3>
+            <li>Phone: +91 9876543210</li>
+            <li>Email: info@sfdfashions.com</li>
+            <li>Address: 123 Fashion Street, Chennai, India</li>
+        </ul>
+        <ul class="list">
+            <h3 class="topic">Follow Us</h3>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Twitter</a></li>
+        </ul>
+        <ul class="list">
+            <h3 class="topic">Quick Links</h3>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'men' %}">Men</a></li>
+            <li><a href="{% url 'women' %}">Women</a></li>
+            <li><a href="{% url 'kids' %}">Kids</a></li>
+        </ul>
+    </div>
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('', views.index, name='index'),
+    path('men/', views.men, name='men'),
+    path('women/', views.women, name='women'),
+    path('kids/', views.kids, name='kids'),
+    path('men/formal/', views.formal, name='formal'),
+    path('men/tshirts/', views.tshirts, name='tshirts'),
+    path('men/veshti/', views.veshti, name='veshti'),
+    path('men/casual/', views.casual, name='casual'),
+    path('men/printed/', views.printed, name='printed'),
+    path('men/jerseys/', views.jerseys, name='jerseys'),
+    path('men/polo/', views.polo, name='polo'),
+    path('men/denim/', views.denim, name='denim'),
+    path('men/linen/', views.linen, name='linen'),
+    path('men/cotton/', views.cotton, name='cotton'),
+    path('men/silk/', views.silk, name='silk'),
+    path('men/wool/', views.wool, name='wool'),
+    path('women/saree/', views.saree, name='saree'),
+    path('women/salwar/', views.salwar, name='salwar'),
+    path('women/chudhidar/', views.chudhidar, name='chudhidar'),
+    path('women/tshirt/', views.tshirt_women, name='tshirt_women'),
+    path('women/top/', views.top, name='top'),
+    path('women/jeans/', views.jeans, name='jeans'),
+    path('kids/casual/', views.casual_kids, name='casual_kids'),
+    path('kids/tshirts/', views.tshirts_kids, name='tshirts_kids'),
+    path('kids/veshti/', views.veshti_kids, name='veshti_kids'),
+]

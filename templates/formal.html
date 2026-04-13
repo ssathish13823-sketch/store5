@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formal Shirts Collections - SFD Fashions</title>
+    <link rel="stylesheet" href="{% static 'css/webpage.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="header">
+        <img src="https://via.placeholder.com/50x50?text=SFD" alt="SFD Logo" id="logo">
+        <h2 id="name">SFD Fashions</h2>
+        <ul>
+        <li><a href="{% url 'index' %}">Home</a></li>
+        <li><a href="{% url 'men' %}">Men's outfits👕</a></li>
+        <li><a href="{% url 'women' %}">Women's outfits👗</a></li>
+        <li><a href="{% url 'kids' %}">Kids outfits👚</a></li>
+        </ul>
+        <button id="back-btn" onclick="goBack()">Back</button>
+    </div>
+   <div id="page">
+     <h1>Formal Shirts Collections</h1>
+     <div id="content">
+        <a href="#" onclick="showGallery('White Dress Shirt')"><img src="https://via.placeholder.com/300x300?text=White+Dress+Shirt" alt="" class="wear"><p class="fits">White Dress Shirts</p></a>
+        <a href="#" onclick="showGallery('Blue Oxford Shirt')"><img src="https://via.placeholder.com/300x300?text=Blue+Oxford+Shirt" alt="" class="wear"><p class="fits">Blue Oxford Shirts</p></a>
+        <a href="#" onclick="showGallery('Black Tuxedo Shirt')"><img src="https://via.placeholder.com/300x300?text=Black+Tuxedo+Shirt" alt="" class="wear"><p class="fits">Black Tuxedo Shirts</p></a>
+        <a href="#" onclick="showGallery('Gray Formal Shirt')"><img src="https://via.placeholder.com/300x300?text=Gray+Formal+Shirt" alt="" class="wear"><p class="fits">Gray Formal Shirts</p></a>
+        <a href="#" onclick="showGallery('Navy Button-Down')"><img src="https://via.placeholder.com/300x300?text=Navy+Button-Down" alt="" class="wear"><p class="fits">Navy Button-Down</p></a>
+        <a href="#" onclick="showGallery('Striped Dress Shirt')"><img src="https://via.placeholder.com/300x300?text=Striped+Dress+Shirt" alt="" class="wear"><p class="fits">Striped Dress Shirts</p></a>
+        <a href="#" onclick="showGallery('Plain White Shirt')"><img src="https://via.placeholder.com/300x300?text=Plain+White+Shirt" alt="" class="wear"><p class="fits">Plain White Shirts</p></a>
+        <a href="#" onclick="showGallery('Light Blue Shirt')"><img src="https://via.placeholder.com/300x300?text=Light+Blue+Shirt" alt="" class="wear"><p class="fits">Light Blue Shirts</p></a>
+        <a href="#" onclick="showGallery('Charcoal Gray Shirt')"><img src="https://via.placeholder.com/300x300?text=Charcoal+Gray+Shirt" alt="" class="wear"><p class="fits">Charcoal Gray Shirts</p></a>
+        <a href="#" onclick="showGallery('Burgundy Shirt')"><img src="https://via.placeholder.com/300x300?text=Burgundy+Shirt" alt="" class="wear"><p class="fits">Burgundy Shirts</p></a>
+        <a href="#" onclick="showGallery('Cream Shirt')"><img src="https://via.placeholder.com/300x300?text=Cream+Shirt" alt="" class="wear"><p class="fits">Cream Shirts</p></a>
+        <a href="#" onclick="showGallery('Dark Blue Shirt')"><img src="https://via.placeholder.com/300x300?text=Dark+Blue+Shirt" alt="" class="wear"><p class="fits">Dark Blue Shirts</p></a>
+    </div>
+     <div id="gallery" style="display: none;">
+       <h2 id="gallery-title"></h2>
+       <div id="gallery-images"></div>
+       <button onclick="closeGallery()">Close</button>
+     </div>
+     </div>
+     <div id="footer">
+        <ul class="list">
+            <h3 class="topic">Contact Details</h3>
+            <li class="items">Phone : 9876543210</li>
+            <li class="items">Instagram : @sfd_fashions</li>
+            <li class="items">Location : Tholar,Virudhachalam,Cuddalore</li>
+            <li class="items">Email : sfd_fashions@gmail.com</li>
+        </ul>
+         <ul class="list">
+            <h3 class="topic">Group Companies</h3>
+            <li class="items">Myntra</li>
+            <li class="items">Shopsy</li>
+            <li class="items">Ajio</li>
+            <li class="items">Meesho</li>
+        </ul>
+         <ul class="list">
+            <h3 class="topic">Help</h3>
+            <li class="items">Payments</li>
+            <li class="items">Refund</li>
+            <li class="items">Shippings</li>
+            <li class="items">return and cancellation</li>
+        </ul>
+         <ul class="list">
+            <h3 class="topic">Consumer Policy</h3>
+            <li class="items">terms of use</li>
+            <li class="items">FAQs</li>
+            <li class="items">Privacy and security</li>
+        </ul>
+     </div>
+     <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
